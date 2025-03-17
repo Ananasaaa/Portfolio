@@ -144,19 +144,6 @@ li {
   list-style: none;
 }
 
-.btn {
-  background-color: $black;
-  color: $white;
-  border-radius: 80px;
-  max-width: 200px;
-  height: 48px;
-  padding: 16px 32px;
-  gap: 8px;
-  border: none;
-  letter-spacing: 1px;
-  cursor: pointer;
-}
-
 .min-gap {
   margin-bottom: 30px;
 }
@@ -168,6 +155,50 @@ li {
 .pd-b {
   padding-bottom: 5px;
 }
+
+.header {
+  padding: 20px 0;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+}
+
+.nav {
+  display: flex;
+  gap: 20px;
+
+  @media screen and (max-width: 768px) {
+    margin-top: 15px;
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+.main-title-1 {
+  font-size: 48px;
+
+  @media screen and (max-width: 768px) {
+    font-size: 32px;
+  }
+
+  @media screen and (max-width: 480px) {
+    font-size: 28px;
+  }
+}
+
+.main {
+  margin-top: 40px;
+}
+
 
 .line {
   border-bottom: 1px solid $black;
@@ -210,13 +241,30 @@ li {
 
 .section-about-me {
   margin-bottom: 50px;
+  
   @media screen and (min-width: 768px) {
     margin-bottom: 200px;
   }
 }
 
+.section-about-me .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
 .section-about-me-content {
   max-width: 508px;
+
+  @media screen and (max-width: 768px) {
+    max-width: 100%;
+  }
 }
 
 .section-about-me-space-content {
@@ -227,6 +275,12 @@ li {
   margin-top: 60px;
   position: relative;
   cursor: pointer;
+  
+  @media screen and (max-width: 768px) {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+  }
 
   &:hover::after,
   &:hover::before {
@@ -264,6 +318,10 @@ li {
   width: 100%;
   position: relative;
   z-index: 100;
+  
+  @media screen and (max-width: 768px) {
+    max-width: 280px;
+  }
 }
 
 .section-resume {
@@ -272,21 +330,77 @@ li {
 
 .section-resume-header {
   margin-bottom: 65px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 16px; 
+    text-align: center;
+  }
 }
 
 .section-resume-table {
   padding-bottom: 75px;
 }
 
+.section-resume-table-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+}
+
 .section-resume-table-data {
   max-width: 775px;
   width: 100%;
   border-top: 1px solid rgba(0, 0, 0, 0.3);
-  padding: 8px 0 48px;
+  padding: 16px 0 48px;
+
+  @media (max-width: 768px) {
+    max-width: 100%;
+    padding-bottom: 24px;
+  }
+}
+
+.section-resume-table-data-left {
+  text-align: left;
+
+  @media (max-width: 768px) {
+    text-align: center;
+  }
 }
 
 .section-resume-table-data-txt {
   padding-bottom: 12px;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $black;
+  color: $white;
+  border-radius: 80px;
+  max-width: 200px;
+  height: 48px;
+  padding: 0 32px;
+  border: none;
+  letter-spacing: 1px;
+  cursor: pointer;
+  text-decoration: none;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    max-width: 100px;
+  }
 }
 
 .footer {
