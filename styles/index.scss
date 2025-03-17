@@ -1,20 +1,11 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
-
-body {
-    font-family: "Poppins", sans-serif;
-}
 
 $black: #000;
 $blue: #24A3FF;
 $blue-light: #8ac8ff;
 $blue-light-2: #a6d5ff;
 $white: #fff;
+
 $h1: 48px;
 $h2-lg: 40px;
 $h2: 36px;
@@ -28,291 +19,293 @@ $space-section: 15px;
 $arrow-lg: 48px;
 $arrow-sm: 14px;
 
-.h1 {
-    font-size: $h1;
+$font-family: "Poppins", sans-serif;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.h2-lg {
+body {
+  font-family: $font-family;
+}
+
+h1 {
+  font-size: $h1;
+}
+
+h2 {
+  &-lg {
     font-size: $h2-lg;
-}
-
-.h2 {
+  }
+  & {
     font-size: $h2;
+  }
 }
 
-.h3 {
-    font-size: $h3;
+h3 {
+  font-size: $h3;
 }
 
-.h4 {
-    font-size: $h4;
+h4 {
+  font-size: $h4;
 }
 
-.h5 {
-    font-size: $h5;
+h5 {
+  font-size: $h5;
 }
 
-.h6 {
-    font-size: $h6;
+h6 {
+  font-size: $h6;
 }
 
 .txt-md {
-    font-size: 20px;
+  font-size: $txt-md;
 }
 
 .txt-sm {
-    font-size: 16px;
+  font-size: $txt-sm;
 }
 
-
 .container {
-    max-width: calc(1040px + $space-section * 2);
-    padding: 0 $space-section;
-    margin: 0 auto;
-    width: 100%;
+  max-width: calc(1040px + $space-section * 2);
+  padding: 0 $space-section;
+  margin: 0 auto;
+  width: 100%;
 }
 
 .flex {
-    display: flex;
-}
-
-.flex-wrap {
+  display: flex;
+  &-wrap {
     flex-wrap: wrap;
-}
-
-.flex-col {
+  }
+  &-col {
     flex-direction: column;
+  }
 }
 
 .items-center {
-    align-items: center;
+  align-items: center;
 }
 
 .justify-btwn {
-    justify-content: space-between;
+  justify-content: space-between;
 }
 
 .justify-cntr {
-    justify-content: center;
+  justify-content: center;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .bold {
-    font-weight: 700;
+  font-weight: 700;
 }
 
 .semibold {
-    font-weight: 600;
+  font-weight: 600;
 }
 
 .medium {
-    font-weight: 500;
+  font-weight: 500;
 }
 
 .normal {
-    font-weight: 400;
+  font-weight: 400;
 }
 
 .txt-black {
-    color: $black;
+  color: $black;
 }
 
 .txt-white {
-    color: $white;
+  color: $white;
 }
 
 .txt-blue {
-    color: $blue;
+  color: $blue;
 }
 
 .main {
-    margin-top: 40px;
+  margin-top: 40px;
 }
 
 .nav-link {
-    padding-right: 20px;
-}
-
-.nav-link:hover {
+  padding-right: 20px;
+  &:hover {
     color: $blue;
+  }
 }
 
 li {
-    list-style: none;
+  list-style: none;
 }
 
 .btn {
-    background-color: $black;
-    color: $white;
-    border-radius: 80px;
-    max-width: 200px;
-    height: 48px;
-    padding: 16px 32px;
-    gap: 8px;
-    border: none;
-    letter-spacing: 1px;
-    cursor: pointer;
+  background-color: $black;
+  color: $white;
+  border-radius: 80px;
+  max-width: 200px;
+  height: 48px;
+  padding: 16px 32px;
+  gap: 8px;
+  border: none;
+  letter-spacing: 1px;
+  cursor: pointer;
 }
 
 .min-gap {
-    margin-bottom: 30px;
+  margin-bottom: 30px;
 }
 
 .gap {
-    padding-right: 20px;
+  padding-right: 20px;
 }
 
 .pd-b {
-    padding-bottom: 5px;
+  padding-bottom: 5px;
 }
 
 .line {
-    border-bottom: 1px solid $black;
-    margin-top: 90px;
+  border-bottom: 1px solid $black;
+  margin-top: 90px;
 }
 
 .link-section {
-    text-decoration: none;
-    display: block;
+  text-decoration: none;
+  display: block;
 }
 
 .section-project {
-    margin-bottom: 60px;
+  margin-bottom: 60px;
 }
 
 .section-project-header {
-    padding-bottom: 40px;
+  padding-bottom: 40px;
 }
 
 .img-responsive {
-   max-width: 1040px;
-   @media screen and (max-width: 992px) {
+  max-width: 1040px;
+  @media screen and (max-width: 992px) {
     max-width: 100%;
-   }
+  }
 }
 
 .section-header-title {
-    padding-top: 30px;
+  padding-top: 30px;
 }
 
 .btn-project {
-    background-color: transparent;
-    color: $black;
-    border: none;
-    cursor: pointer;
-}
-
-.btn-project:hover {
+  background-color: transparent;
+  color: $black;
+  border: none;
+  cursor: pointer;
+  &:hover {
     color: $blue;
+  }
 }
 
 .section-about-me {
-    margin-bottom: 50px;
-}
-@media screen and (min-width: 768px) {
-    .section-about-me {
-        margin-bottom: 200px;
-    }
+  margin-bottom: 50px;
+  @media screen and (min-width: 768px) {
+    margin-bottom: 200px;
+  }
 }
 
 .section-about-me-content {
-    max-width: 508px;
+  max-width: 508px;
 }
 
 .section-about-me-space-content {
-    margin-bottom: 40px;
+  margin-bottom: 40px;
 }
 
 .section-about-me-img-wrap {
-    margin-top: 60px;
-    position: relative;
-    cursor: pointer;
-}
+  margin-top: 60px;
+  position: relative;
+  cursor: pointer;
 
-.section-about-me-img-wrap:hover::after,
-.section-about-me-img-wrap:hover::before {
+  &:hover::after,
+  &:hover::before {
     bottom: 7px;
     left: 0;
     opacity: 0;
-}
+  }
 
-.section-about-img {
-    max-width: 333px;
-    width: 100%;
-    position: relative;
-    z-index: 100;
-}
-
-.section-about-me-img-wrap::after,
-.section-about-me-img-wrap::before {
+  &::after,
+  &::before {
     content: " ";
     position: absolute;
     width: 100%;
     height: calc(100% - 7px);
     left: 0;
     transition: all 0.3s ease;
-}
+  }
 
-.section-about-me-img-wrap::before {
+  &::before {
     bottom: 33.75px;
     left: 28.5px;
     background-color: $blue-light;
     z-index: 1;
-}
+  }
 
-.section-about-me-img-wrap::after {
+  &::after {
     bottom: 60px;
     left: 60px;
     background-color: $blue-light-2;
+  }
+}
+
+.section-about-img {
+  max-width: 333px;
+  width: 100%;
+  position: relative;
+  z-index: 100;
 }
 
 .section-resume {
-    padding-bottom: 75px;
+  padding-bottom: 75px;
 }
 
 .section-resume-header {
-    margin-bottom: 65px;
+  margin-bottom: 65px;
 }
 
 .section-resume-table {
-    padding-bottom: 75px;
-}
-
-.section-resume-table {
-    padding-bottom: 75px;
+  padding-bottom: 75px;
 }
 
 .section-resume-table-data {
-    max-width: 775px;
-    width: 100%;
-    border-top: 1px solid rgba(0, 0, 0, 0.3);
-    padding: 8px 0 48px;
+  max-width: 775px;
+  width: 100%;
+  border-top: 1px solid rgba(0, 0, 0, 0.3);
+  padding: 8px 0 48px;
 }
 
 .section-resume-table-data-txt {
-    padding-bottom: 12px;
+  padding-bottom: 12px;
 }
 
 .footer {
-    background-color: $black;
-    padding: 80px 0;
+  background-color: $black;
+  padding: 80px 0;
 }
 
 .pd-right {
-    padding-right: 10px;
+  padding-right: 10px;
 }
 
 .footer-title {
-    padding-bottom: 24px;
+  padding-bottom: 24px;
 }
 
 .footer-sub-title {
-    padding-bottom: 40px;
+  padding-bottom: 40px;
 }
 
 .link:hover {
-    color: $blue;
+  color: $blue;
 }
